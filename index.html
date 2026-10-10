@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#570d1a"><meta name="description" content="A royal wedding invitation for Sanjana Mishra and Vidyasagar Pant.">
+<title>Sanjana & Vidyasagar — A Royal Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div>
+<section id="gate" class="gate" aria-label="Wedding invitation entrance">
+  <div class="gate-glow"></div><div class="gate-arch"></div>
+  <div class="door door-left" aria-hidden="true"><div class="door-inner"><div class="door-ornament">❧</div><div class="door-medallion">✧</div><div class="door-flower">✿</div><div class="door-bottom">❦</div></div></div>
+  <div class="door door-right" aria-hidden="true"><div class="door-inner"><div class="door-ornament">❧</div><div class="door-medallion">✧</div><div class="door-flower">✿</div><div class="door-bottom">❦</div></div></div>
+  <div class="gate-copy">
+    <div class="mini-emblem">✧ <span>शुभ विवाह</span> ✧</div>
+    <p class="eyebrow">A MOMENT OF MAGIC</p><h1>A Royal<br><em>Invitation Awaits</em></h1>
+    <p class="tap-instruction" id="tapInstruction">Tap three times to open the doors</p>
+    <div class="tap-dots" aria-label="Knocks remaining"><span></span><span></span><span></span></div>
+    <button class="button button-gold" id="openBtn">Open Invitation <span>↗</span></button>
+    <button class="text-button" id="soundToggle" aria-pressed="false">Sound effects: off</button>
+    <p class="gate-hint">A celebration of love, family & forever</p>
+  </div>
+  <button id="tapLayer" class="tap-layer" aria-label="Tap to knock on the doors three times"></button>
+</section>
+
+<main id="invitation" class="invitation" hidden>
+  <nav class="topbar"><a class="brand" href="#hero">S <span>&</span> V</a><div class="nav-links"><a href="#story">Our Story</a><a href="#events">Celebrations</a><a href="#venue">Venue</a><a href="#couple-quiz">Couple Q&amp;A</a><a href="#rsvp">RSVP</a></div><button class="small-button" id="editOpen">✎ Edit Invitation</button></nav>
+  <section id="hero" class="hero section-pad">
+    <div class="hero-flower flower-one">✿</div><div class="hero-flower flower-two">❀</div>
+    <div class="ornament-line"><span>✧</span> WITH THE BLESSINGS OF OUR FAMILIES <span>✧</span></div>
+    <p class="script-line">Two hearts, one beautiful journey, and a lifetime of togetherness.</p>
+    <p class="eyebrow">YOU ARE CORDIALLY INVITED TO CELEBRATE THE WEDDING OF</p>
+    <h2 class="couple-name"><span id="brideName">Sanjana Mishra</span><i>&</i><span id="groomName">Vidyasagar Pant</span></h2>
+    <div class="hero-divider"><span>❦</span></div>
+    <p id="heroDate" class="hero-date">12 December 2026</p><p id="heroVenue" class="hero-venue">Lucknow, Uttar Pradesh</p>
+    <p id="heroQuote" class="blessing">May your love grow deeper, your laughter grow louder, and your days be filled with blessings.</p>
+    <button class="button button-maroon" id="beginBtn">Begin Our Celebration <span>↓</span></button>
+    <div class="scroll-note">SCROLL TO EXPLORE</div>
+  </section>
+
+  <section id="story" class="story section-pad">
+    <div class="section-kicker">A LITTLE BIT OF FOREVER</div><h2 class="section-title">The beginning of <em>our always</em></h2>
+    <p class="section-intro" id="introText">Some stories are written in the stars. Ours is a new chapter filled with laughter, friendship, and a promise to choose each other every day.</p>
+    <div class="photo-feature">
+      <div class="photo-main photo-placeholder" id="heroPhotoWrap"><img id="heroPhoto" alt="Couple photograph placeholder" src="assets/photo-placeholder.svg"><span class="photo-label">OUR FAVOURITE CHAPTER</span></div>
+      <div class="photo-side"><div class="side-quote">“Together is a beautiful place to be.”</div><div class="photo-small photo-placeholder"><img id="sidePhoto" alt="Couple memory placeholder" src="assets/photo-placeholder.svg"></div></div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section id="countdown" class="countdown section-pad">
+    <p class="eyebrow">THE COUNTDOWN TO FOREVER</p><h2 class="section-title">The day we say <em>“I do”</em></h2>
+    <div class="count-grid"><div><strong id="days">--</strong><span>Days</span></div><div><strong id="hours">--</strong><span>Hours</span></div><div><strong id="minutes">--</strong><span>Minutes</span></div><div><strong id="seconds">--</strong><span>Seconds</span></div></div>
+    <p id="countMessage" class="count-message">Every moment brings us closer.</p>
+  </section>
+
+  <section id="events" class="events section-pad">
+    <div class="section-kicker">JOIN THE JOY</div><h2 class="section-title">Days of love, <em>nights of magic</em></h2>
+    <p class="section-intro">Four celebrations, countless memories. We cannot wait to celebrate with you.</p>
+    <div class="event-grid" id="eventGrid"></div>
+  </section>
+
+  <section id="venue" class="venue section-pad">
+    <div class="venue-card"><div class="venue-copy"><div class="section-kicker">MEET US IN</div><h2 class="section-title">Beautiful <em>Lucknow</em></h2><p class="venue-text" id="venueName">Venue details to be announced</p><p id="venueAddress">Lucknow, Uttar Pradesh, India</p><p class="muted" id="travelNotes">More travel and parking information will be shared soon.</p><a class="button button-gold" id="directionsBtn" href="https://www.google.com/maps/search/?api=1&query=Lucknow%2C%20Uttar%20Pradesh%2C%20India" target="_blank" rel="noopener">Get Directions ↗</a></div><div class="map-art" aria-label="Decorative map illustration"><div class="map-ring">⌖</div><span>LUCKNOW<br>UTTAR PRADESH</span><div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div></div></div>
+  </section>
+
+  <section id="couple-quiz" class="couple-quiz section-pad">
+    <div class="section-kicker">A LITTLE LOVE, A LITTLE FUN</div>
+    <h2 class="section-title">How well do you know <em>the lovebirds?</em></h2>
+    <p class="section-intro">Pick your answers, make us smile, and leave your name so we know who guessed what! 💌</p>
+    <form id="coupleQuizForm" class="quiz-form">
+      <label class="quiz-name">Your name<input id="quizGuestName" required maxlength="100" placeholder="Who is sending all this love?"></label>
+      <fieldset class="quiz-question"><legend>1. Who said “I love you” first? 💗</legend><label class="quiz-option"><input type="radio" name="q1" value="Sanjana" required><span>Sanjana 🌸</span></label><label class="quiz-option"><input type="radio" name="q1" value="Vidyasagar"><span>Vidyasagar 🥹</span></label><label class="quiz-option"><input type="radio" name="q1" value="Both at the same time"><span>Both at the same time 💞</span></label><label class="quiz-option"><input type="radio" name="q1" value="Still a mystery"><span>Still a mystery 👀</span></label></fieldset>
+      <fieldset class="quiz-question"><legend>2. Who is more likely to steal the last bite? 🍰</legend><label class="quiz-option"><input type="radio" name="q2" value="Sanjana" required><span>Sanjana 😇</span></label><label class="quiz-option"><input type="radio" name="q2" value="Vidyasagar"><span>Vidyasagar 😋</span></label><label class="quiz-option"><input type="radio" name="q2" value="Both, no sharing"><span>Both. Sharing is a myth 😂</span></label></fieldset>
+      <fieldset class="quiz-question"><legend>3. Who takes longer to get ready? 💄</legend><label class="quiz-option"><input type="radio" name="q3" value="Sanjana" required><span>Sanjana ✨</span></label><label class="quiz-option"><input type="radio" name="q3" value="Vidyasagar"><span>Vidyasagar 👔</span></label><label class="quiz-option"><input type="radio" name="q3" value="Depends on the occasion"><span>Depends on the occasion 🤭</span></label></fieldset>
+      <fieldset class="quiz-question"><legend>4. What will their married life have the most of? 🏡</legend><label class="quiz-option"><input type="radio" name="q4" value="Love and cuddles" required><span>Love and cuddles 💕</span></label><label class="quiz-option"><input type="radio" name="q4" value="Food dates"><span>Food dates 🍕</span></label><label class="quiz-option"><input type="radio" name="q4" value="Cute little arguments"><span>Cute little arguments 😅</span></label><label class="quiz-option"><input type="radio" name="q4" value="All of the above"><span>All of the above, obviously! 🥰</span></label></fieldset>
+      <fieldset class="quiz-question"><legend>5. Your one-word blessing for the couple? 🌷</legend><label class="quiz-option"><input type="radio" name="q5" value="Forever" required><span>Forever 💍</span></label><label class="quiz-option"><input type="radio" name="q5" value="Laughter"><span>Laughter 😄</span></label><label class="quiz-option"><input type="radio" name="q5" value="Adventure"><span>Adventure ✈️</span></label><label class="quiz-option"><input type="radio" name="q5" value="Endless love"><span>Endless love ❤️</span></label></fieldset>
+      <label class="quiz-note">A little note for the couple (optional)<textarea id="quizMessage" rows="3" maxlength="500" placeholder="Your wishes, inside jokes, or marriage advice…"></textarea></label>
+      <button class="button button-maroon" type="submit">Send our answers 💌</button>
+      <p id="quizStatus" class="status" role="status" aria-live="polite"></p>
+      <p class="form-note">Your answers can be collected in a private Google Sheet once the organiser connects the free response link. Please don't enter sensitive information.</p>
+    </form>
+  </section>
+
+  <section id="rsvp" class="rsvp section-pad">
+    <div class="section-kicker">SAVE YOUR SEAT</div><h2 class="section-title">Will you join <em>our celebration?</em></h2><p class="section-intro">Your presence would make our day even more special.</p>
+    <form id="rsvpForm" class="rsvp-form">
+      <label>Guest name<input id="guestName" required placeholder="Your full name"></label>
+      <div class="form-row"><label>Number attending<select id="guestCount"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label><label>Will you attend?<select id="attendance"><option value="Attending">Attending</option><option value="Unable to attend">Unable to attend</option><option value="Not yet sure">Not yet sure</option></select></label></div>
+      <label>Dietary preference (optional)<select id="diet"><option value="Not specified">Prefer not to say</option><option>Vegetarian</option><option>Vegan</option><option>Jain</option><option>Other</option></select></label>
+      <label>A little message (optional)<textarea id="guestMessage" rows="3" placeholder="Send the couple your wishes…"></textarea></label>
+      <button class="button button-maroon" type="submit">Prepare WhatsApp RSVP ↗</button><p class="form-note">This prepares a message for you to review and send. No response is automatically collected by this website.</p><p id="rsvpStatus" class="status" role="status"></p>
+    </form>
+  </section>
+  <footer class="footer"><div class="footer-mark">S <span>&</span> V</div><p>With love, and the promise of forever.</p><p id="footerDate">12 December 2026 · Lucknow, India</p><button class="text-button light" id="replayBtn">↺ Replay the royal reveal</button><button class="text-button light" id="footerEdit">Edit this invitation</button></footer>
+</main>
+
+<div id="editor" class="editor-backdrop" hidden>
+ <aside class="editor" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
+  <header class="editor-head"><div><p class="section-kicker">YOUR WEDDING, YOUR WAY</p><h2 id="editorTitle">Invitation editor</h2></div><button class="icon-button" id="editClose" aria-label="Close editor">×</button></header>
+  <div class="editor-actions"><button class="small-button" id="saveBtn">Save changes</button><button class="small-button subtle" id="cancelBtn">Cancel</button><button class="small-button subtle" id="previewBtn">Preview</button></div>
+  <div class="editor-tabs" role="tablist"><button class="editor-tab active" data-tab="couple">Couple</button><button class="editor-tab" data-tab="events">Events</button><button class="editor-tab" data-tab="photos">Photos</button><button class="editor-tab" data-tab="design">Design</button><button class="editor-tab" data-tab="music">Music</button><button class="editor-tab" data-tab="venue">Venue & RSVP</button><button class="editor-tab" data-tab="tools">Export</button></div>
+  <div class="editor-content">
+   <section class="editor-panel active" data-panel="couple"><h3>Couple details</h3><label>Bride's name<input data-bind="brideName"></label><label>Groom's name<input data-bind="groomName"></label><label>Wedding date<input type="date" data-bind="weddingDate"></label><label>Couple introduction<textarea data-bind="introText" rows="3"></textarea></label><label>Invitation message<textarea data-bind="heroQuote" rows="3"></textarea></label><label>Family names / blessing line<input data-bind="familyLine" placeholder="With the blessings of our families"></label><label>WhatsApp RSVP number (country code, digits only)<input data-bind="whatsapp" placeholder="91XXXXXXXXXX"></label></section>
+   <section class="editor-panel" data-panel="events"><h3>Celebration details</h3><p class="editor-help">Unknown dates and times stay marked as to be announced. Add a venue or dress code whenever ready.</p><div id="eventEditorList"></div></section>
+   <section class="editor-panel" data-panel="photos"><h3>Photo gallery</h3><p class="editor-help">Images are kept in this browser for preview. Large uploads may exceed browser storage; download your original images separately and use relative paths for publishing.</p><label>Hero photograph<input type="file" id="heroUpload" accept="image/png,image/jpeg,image/webp"></label><label>Secondary photograph<input type="file" id="sideUpload" accept="image/png,image/jpeg,image/webp"></label><label>Add gallery image<input type="file" id="galleryUpload" accept="image/png,image/jpeg,image/webp" multiple></label><div id="photoEditorList"></div></section>
+   <section class="editor-panel" data-panel="design"><h3>Design customisation</h3><label>Palette<select data-bind="palette"><option value="royal">Royal maroon & gold</option><option value="ivory">Ivory & antique gold</option><option value="berry">Berry & champagne</option></select></label><label>Display font<select data-bind="font"><option value="serif">Elegant serif</option><option value="modern">Modern sans-serif</option></select></label><label>Decorative particles<select data-bind="particles"><option value="on">On</option><option value="off">Off</option></select></label><label>Floral decorations<select data-bind="florals"><option value="on">On</option><option value="off">Off</option></select></label><label>Animations<select data-bind="animations"><option value="on">On</option><option value="off">Reduced / off</option></select></label></section>
+   <section class="editor-panel" data-panel="music"><h3>Music & sound</h3><label>Music file (MP3, OGG, WAV)<input type="file" id="musicUpload" accept="audio/mpeg,audio/ogg,audio/wav,audio/mp4"></label><label>Or authorised audio URL<input data-bind="musicUrl" type="url" placeholder="https://…"></label><label>Background music<select data-bind="musicEnabled"><option value="off">Off</option><option value="on">On after interaction</option></select></label><label>Music volume <input type="range" min="0" max="1" step=".05" data-bind="volume"></label><label class="inline-check"><input type="checkbox" data-bind="soundEffects"> Enable knock & chime effects</label><audio id="musicPlayer" controls loop></audio><p class="editor-help">Only use audio you have permission to share. Browsers may block autoplay until the visitor interacts.</p></section>
+   <section class="editor-panel" data-panel="venue"><h3>Venue & RSVP</h3><label>Venue name<input data-bind="venueName"></label><label>Full address<textarea data-bind="venueAddress" rows="3"></textarea></label><label>Google Maps destination URL<input data-bind="mapUrl" type="url"></label><label>Travel / parking notes<textarea data-bind="travelNotes" rows="3"></textarea></label><label>RSVP instructions<input data-bind="rsvpInstructions"></label></section>
+   <section class="editor-panel" data-panel="tools"><h3>Preview, save & move</h3><button class="button button-maroon full" id="exportBtn">Download configuration JSON</button><label class="file-label">Import configuration JSON<input id="importFile" type="file" accept="application/json,.json"></label><button class="button button-outline full" id="resetBtn">Reset to original details</button><p class="editor-help">Save stores settings in this browser only. It does not publish changes to an online website or sync them to another device.</p><p id="editorStatus" role="status" class="status"></p></section>
+  </div>
+  <div class="editor-foot">Changes are previewed on this page. To publish edits, update the website files and redeploy.</div>
+ </aside>
+</div>
+<audio id="knockAudio" preload="auto" src="assets/knock.wav"></audio><audio id="chimeAudio" preload="auto" src="assets/chime.wav"></audio>
+<script src="config.js"></script><script src="script.js"></script>
+</body></html>

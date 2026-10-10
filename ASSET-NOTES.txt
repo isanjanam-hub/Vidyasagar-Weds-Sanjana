@@ -1,0 +1,1 @@
+photo-placeholder.svg is original vector placeholder artwork. knock.wav and chime.wav are simple synthesized sound effects created for this project. Replace the photo placeholder with your own licensed photographs. No music track is bundled.
